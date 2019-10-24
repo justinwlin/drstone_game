@@ -26,4 +26,16 @@ Goals:
 - Implement system to place crafted resource
 - Implement 2 player movement
 
+
+Ex. How to loop through the dictionary:
+1) Grab the length of the sprite b/c the dictionary length is based on how many
+sprites there are
+2) Then you can just loop through it: 
+
+ex. 
+itemStorageNum = sprite_get_number(spr_itemStorage);
+for(var i = 0; i < itemStorageNum; i++){
+	itemAmountInStorage = global.storage[? i]
+}
+
 */
