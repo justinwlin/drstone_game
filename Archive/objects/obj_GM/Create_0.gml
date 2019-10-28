@@ -2,6 +2,27 @@ if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.05);
 
 if gamepad_is_connected(1) gamepad_set_axis_deadzone(0, 0.05);
 
+/*
+===========
+Global Variable
+===========
+*/
+
+global.PLAYER_ONE_UP_KEYBOARD = ord("W")
+global.PLAYER_ONE_DOWN_KEYBOARD = ord("S")
+global.PLAYER_ONE_RIGHT_KEYBOARD = ord("D")
+global.PLAYER_ONE_LEFT_KEYBOARD = ord("A")
+global.PLAYER_ONE_CRAFT_KEYBOARD = ord("E")
+global.PLAYER_ONE_GUI_CRAFTING_TABLE_KEYBOARD = ord("B")
+
+
+global.PLAYER_TWO_UP_KEYBOARD = vk_up
+global.PLAYER_TWO_DOWN_KEYBOARD = vk_down
+global.PLAYER_TWO_RIGHT_KEYBOARD = vk_right
+global.PLAYER_TWO_LEFT_KEYBOARD = vk_left
+global.PLAYER_TWO_CRAFT_KEYBOARD = ord("P")
+global.PLAYER_TWO_GUI_CRAFTING_TABLE_KEYBOARD = ord("G")
+
 
 /*
 ===========
