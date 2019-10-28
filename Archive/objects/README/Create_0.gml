@@ -38,4 +38,24 @@ for(var i = 0; i < itemStorageNum; i++){
 	itemAmountInStorage = global.storage[? i]
 }
 
+
+=================================
+The way placing a block works. 
+=================================
+
+1) Click O to bring up the placing menu
+2) Press e to select the item to place (right now it just keeps defaulting to the first item)
+3) Press K to place the item
+
+
+When you click O spawns an obj_placeBlocks
+When you click E it sets a global variable called show_grid to true
+
+when show_grid turns to false by clicking e again
+- Tiledots will destroy themselves
+- obj_craftedItemPreview will also destroy themselves
+
+If you press K it sets show_grid to false -> and a variable in craftedItemPreview to true
+-> so that on destroy it spawns the item that it represents
+
 */
