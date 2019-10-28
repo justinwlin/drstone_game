@@ -25,13 +25,14 @@ if(global.SHOW_GRID){
 				inst = instance_create_depth(xPos, yPos, 1, obj_tileDots)
 			}
 			
-			//Cursor 1 logic to draw 
+			//Cursor 1 logic to draw
 			if(i == cursor1PlayerX and j == cursor1PlayerY){
 				//If there is a dot there
 				inst = instance_position(xPos, yPos, obj_tileDots)
-				instance_destroy(inst)
+				instance_destroy(inst)//Destroy it
+				//Check if there is already a craftedItem preview
 				inst = instance_position(xPos, yPos, obj_craftedItemPreview)
-				if(inst == noone){
+				if(inst == noone){//If not then put one there
 					instance_create_depth(xPos, yPos, 1, obj_craftedItemPreview)
 				}
 			}
