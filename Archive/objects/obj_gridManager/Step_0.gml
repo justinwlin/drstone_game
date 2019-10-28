@@ -12,23 +12,31 @@ if(global.SHOW_GRID){
 			xPos = result[0]
 			yPos = result[1]
 			
-			//Checks the xPos and yPos for a tiledot
 			inst = instance_position(xPos, yPos, obj_tileDots)
-			//If there is none there and doesn't overlap with the cursor of player 1
-			if(inst == noone and xPos != cursor1PlayerX and yPos != cursor1PlayerY){
-				//then place a dot
+			atCursor1Position = (i == cursor1PlayerX and j == cursor1PlayerY)
+			
+			if(inst == noone and not atCursor1Position){
+				//If not at the cursor one position and I encounter a crafted item
+				checkingTrash = instance_position(xPos, yPos, obj_craftedItemPreview)
+				if(checkingTrash != noone){
+					//Delete that item
+					instance_destroy(checkingTrash)
+				}
 				inst = instance_create_depth(xPos, yPos, 1, obj_tileDots)
-			}else{
-				//else check if there is something there
-				player1Cursor = instance_position(cursor1PlayerX, cursor1PlayerY, obj_craftedItemPreview)
-				if(player1Cursor == noone){
-					coor1Player = global.GRID_COORDINATE[# cursor1PlayerX, cursor1PlayerY]
-					coor1PlayerX = coor1Player[0]
-					coor1PlayerY = coor1Player[1]
-					instance_create_depth(coor1PlayerX, coor1PlayerY, 1, obj_craftedItemPreview)
+			}
+			
+			//Cursor 1 logic to draw 
+			if(i == cursor1PlayerX and j == cursor1PlayerY){
+				//If there is a dot there
+				inst = instance_position(xPos, yPos, obj_tileDots)
+				instance_destroy(inst)
+				inst = instance_position(xPos, yPos, obj_craftedItemPreview)
+				if(inst == noone){
+					instance_create_depth(xPos, yPos, 1, obj_craftedItemPreview)
 				}
 			}
-			//Need to implement cleaning up after the player moves their cursor
+			
+			//Need to implement player 2 logic cursor
 		}
 	}
 }
