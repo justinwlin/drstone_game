@@ -39,8 +39,8 @@ if(playerWhoIsCrafting == 1){
 Setting the square color if you have enough
 */
 if(ds_map_exists(global.STORAGE_CRAFTEDITEMS, itemSelectedIndex)){
-	numberOfCraftedItem = global.CRAFTEDITEMS_RECIPE[? itemSelectedIndex]
-	if(numberOfCraftedItem > 1){
+	numberOfCraftedItem = global.STORAGE_CRAFTEDITEMS[? itemSelectedIndex]
+	if(numberOfCraftedItem > 0){
 		squareColor = c_green
 	}else{
 		squareColor = c_red

@@ -36,15 +36,27 @@ if(deviceIndex==0){
 	
 	
 }else{
-	/*
-	Add player 2 control
-	- Movement
-	- Calling craft/build menu
-	*/
-	scr_callCraftingGUI(global.PLAYER_TWO_GUI_CRAFTING_TABLE_KEYBOARD)
+	if(not isCrafting and not isBuilding){
+	//Movement
+		if(keyboard_check(global.PLAYER_TWO_LEFT_KEYBOARD)){
+			x -= 5
+		}
+
+		if(keyboard_check(global.PLAYER_TWO_RIGHT_KEYBOARD)){
+			x += 5
+		}
+
+		if(keyboard_check(global.PLAYER_TWO_DOWN_KEYBOARD)){
+			y += 5
+		}
+
+		if(keyboard_check(global.PLAYER_TWO_UP_KEYBOARD)){
+			y -= 5
+		}
+	}
 	
-		//Build
-		
+	scr_callCraftingGUI(global.PLAYER_TWO_GUI_CRAFTING_TABLE_KEYBOARD)
+	//Build
 	if(keyboard_check_pressed(global.PLAYER_TWO_GUI_BUILDING_KEYBOARD) and not isCrafting){
 		if(not isBuilding){
 			buildingTable = instance_create_depth(x, y, 1, obj_placeBlocks)
