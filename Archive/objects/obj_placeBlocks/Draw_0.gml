@@ -11,6 +11,15 @@ if(playerWhoIsCrafting == 0){
 if(playerWhoIsCrafting == 1){
 	playerAccess = obj_player2
 }
-if(!global.SHOW_GRID){
-	drawingGUI_PlaceBlocks()
+
+if(playerAccess == obj_player1){
+	if(not global.SHOW_GRID_1){
+		drawingGUI_PlaceBlocks()
+	}
+}
+
+if(playerAccess == obj_player2){
+	if(not global.SHOW_GRID_2){
+		drawingGUI_PlaceBlocks()
+	}
 }
