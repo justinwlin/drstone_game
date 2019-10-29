@@ -7,16 +7,14 @@ if(playerWhoIsCrafting == 0){
 	//Player Input
 	scr_PlaceBlock_Player1_KeyboardInput()
 	
-	if(keyboard_check_pressed(global.PLAYER_ONE_CRAFT_KEYBOARD)){
+	if(keyboard_check_pressed(global.PLAYER_ONE_GUI_BUILD_GRID_KEYBOARD)){
 		show_debug_message("ACTIVATE")
 		global.SHOW_GRID_1 = !global.SHOW_GRID_1
 		if(global.SHOW_GRID_1){
 			global.GRID_player1SelectedItem = itemSelectedIndex
 		}
 		show_debug_message(global.SHOW_GRID_1)
-		
 	}
-
 }
 
 
@@ -25,7 +23,7 @@ if(playerWhoIsCrafting == 1){
 	/*
 	Need to add Player 2 Craft Button
 	*/
-	if(keyboard_check_pressed(global.PLAYER_TWO_CRAFT_KEYBOARD)){
+	if(keyboard_check_pressed(global.PLAYER_TWO_GUI_BUILD_GRID_KEYBOARD)){
 		show_debug_message("ACTIVATE")
 		global.SHOW_GRID_2 = !global.SHOW_GRID_2
 		if(global.SHOW_GRID_2){
@@ -34,11 +32,8 @@ if(playerWhoIsCrafting == 1){
 			obj_gridManager.cursor2PlayerX = 0
 		}
 		show_debug_message(global.SHOW_GRID_2)
-		
 	}
 }
-
-
 
 /*
 Setting the square color if you have enough

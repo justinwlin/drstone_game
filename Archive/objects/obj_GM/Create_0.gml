@@ -8,22 +8,36 @@ Global Variable
 ===========
 */
 
+//===========
+//Player 1
+//===========
+//Movement
 global.PLAYER_ONE_UP_KEYBOARD = ord("W")
 global.PLAYER_ONE_DOWN_KEYBOARD = ord("S")
 global.PLAYER_ONE_RIGHT_KEYBOARD = ord("D")
 global.PLAYER_ONE_LEFT_KEYBOARD = ord("A")
+//Crafting
 global.PLAYER_ONE_CRAFT_KEYBOARD = ord("E")
 global.PLAYER_ONE_GUI_CRAFTING_TABLE_KEYBOARD = ord("B")
+//Building Keyboard
 global.PLAYER_ONE_GUI_BUILDING_KEYBOARD = ord("O")
+global.PLAYER_ONE_GUI_BUILD_GRID_KEYBOARD = ord("B")
 global.PLAYER_ONE_PLACE_BLOCK = ord("H")
 
+//===========
+//Player 2
+//===========
+//Movement
 global.PLAYER_TWO_UP_KEYBOARD = vk_up
 global.PLAYER_TWO_DOWN_KEYBOARD = vk_down
 global.PLAYER_TWO_RIGHT_KEYBOARD = vk_right
 global.PLAYER_TWO_LEFT_KEYBOARD = vk_left
+//Crafting
 global.PLAYER_TWO_CRAFT_KEYBOARD = ord("P")
 global.PLAYER_TWO_GUI_CRAFTING_TABLE_KEYBOARD = ord("G")
+//Building
 global.PLAYER_TWO_GUI_BUILDING_KEYBOARD = ord("U")
+global.PLAYER_TWO_GUI_BUILD_GRID_KEYBOARD = ord("G")
 global.PLAYER_TWO_PLACE_BLOCK = ord("J")
 
 /*
