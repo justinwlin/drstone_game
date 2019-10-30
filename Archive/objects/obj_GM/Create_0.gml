@@ -154,7 +154,7 @@ global.CRAFTEDITEMS_RECIPE = ds_map_create();
 global.CRAFTEDITEMS_RECIPE[? crafted.fence] = [[items.wood, 2], [items.stone, 3]]
 global.CRAFTEDITEMS_RECIPE[? crafted.tent] = [[items.wood, 2], [items.stone, 4]]
 global.CRAFTEDITEMS_RECIPE[? crafted.questionBlock] = [[items.wood, 2], [items.stone, 5]]
-global.CRAFTEDITEMS_RECIPE[? crafted.bluePortal] = [[items.wood, 2], [items.stone, 6]]
+global.CRAFTEDITEMS_RECIPE[? crafted.bluePortal] = [[items.wood, 2], [items.stone, 6], [items.glass, 3]]
 
 /*
 ===========
@@ -176,9 +176,9 @@ Required Time for Resources
 =================================
 */
 global.RQTime = ds_map_create();
-global.RQTime[? resources.tree] = 10
-global.RQTime[? resources.boulder] = 5
-global.RQTime[? resources.chest] = 5
-global.RQTime[? resources.blueThingy] = 5
-global.RQTime[? resources.cloud] = 5
-global.RQTime[? resources.questionMark] = 5
+global.RQTime[? resources.tree] = 2
+global.RQTime[? resources.boulder] = 2
+global.RQTime[? resources.chest] = 2
+global.RQTime[? resources.blueThingy] = 2
+global.RQTime[? resources.cloud] = 2
+global.RQTime[? resources.questionMark] = 2
