@@ -8,3 +8,8 @@ for(i = 0; i < 5; i++){
 	obj = instance_create_depth(50 + i * 200, 30, 1, obj_resource)
 	obj.resourceType = irandom(4)
 }
+
+for(i = 0; i < 5; i++){
+	obj = instance_create_depth(50 + i * 200, 100, 1, obj_resource)
+	obj.resourceType = irandom(4)
+}
