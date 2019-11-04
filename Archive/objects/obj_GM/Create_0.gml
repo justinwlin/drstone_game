@@ -88,7 +88,7 @@ Enums
 enum items {
 	stone, 
 	wood, 
-	glass, 
+	steel, 
 	meat
 }
 
@@ -117,7 +117,7 @@ enum crafted {
 Picked Up Items
 ===========
 */
-global.nameOfItems = ["stone", "wood", "glass", "meat"]//MAke this the same order as item enum
+global.nameOfItems = ["stone", "wood", "steel", "meat"]//MAke this the same order as item enum
 global.PICKED_UP_ITEMS = ds_queue_create();
 /*
 ======================
@@ -128,7 +128,7 @@ global.storage = ds_map_create();
 //Initialization of storage
 global.storage[? items.stone] = 2
 global.storage[? items.wood] = 5
-global.storage[? items.glass] = 1
+global.storage[? items.steel] = 1
 global.storage[? items.meat] = 1
 
 /*
@@ -154,7 +154,7 @@ global.CRAFTEDITEMS_RECIPE = ds_map_create();
 global.CRAFTEDITEMS_RECIPE[? crafted.fence] = [[items.wood, 2], [items.stone, 3]]
 global.CRAFTEDITEMS_RECIPE[? crafted.tent] = [[items.wood, 2], [items.stone, 4]]
 global.CRAFTEDITEMS_RECIPE[? crafted.questionBlock] = [[items.wood, 2], [items.stone, 5]]
-global.CRAFTEDITEMS_RECIPE[? crafted.bluePortal] = [[items.wood, 2], [items.stone, 6], [items.glass, 3]]
+global.CRAFTEDITEMS_RECIPE[? crafted.bluePortal] = [[items.wood, 2], [items.stone, 6], [items.steel, 3]]
 
 /*
 ===========
@@ -165,10 +165,10 @@ global.DROPS = ds_map_create();
 //[(itemObject, numOfThatObject), ...]
 global.DROPS[? resources.tree] = [[items.wood, 2]]
 global.DROPS[? resources.boulder] = [[items.stone, 3]]
-global.DROPS[? resources.chest] = [[items.meat, 3], [items.glass, 2]]
-global.DROPS[? resources.blueThingy] = [[items.glass, 2]]
-global.DROPS[? resources.cloud] = [[items.glass, 2]]
-global.DROPS[? resources.questionMark] = [[items.glass, 2]]
+global.DROPS[? resources.chest] = [[items.meat, 3], [items.steel, 2]]
+global.DROPS[? resources.blueThingy] = [[items.steel, 2]]
+global.DROPS[? resources.cloud] = [[items.steel, 2]]
+global.DROPS[? resources.questionMark] = [[items.steel, 2]]
 
 /*
 =================================
