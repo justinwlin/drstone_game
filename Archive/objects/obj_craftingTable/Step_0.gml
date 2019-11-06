@@ -31,15 +31,14 @@ if(playerWhoIsCrafting == 0){
 		}
 	}
 	
-	if(keyboard_check_pressed(global.PLAYER_ONE_CRAFT_KEYBOARD)){
+	if(global.PLAYER_ONE_INTERACTION_KEY){
 		scr_CraftAnItem()
 	}
-
 }
 
 
 if(playerWhoIsCrafting == 1){
-	//add player 2 movement control to control red squre
+		//Add player 1 movement control to control red square
 	if(keyboard_check_pressed(global.PLAYER_TWO_RIGHT_KEYBOARD)){
 		SquareX += 1
 		if(SquareX >= itemPerRow){
@@ -66,10 +65,7 @@ if(playerWhoIsCrafting == 1){
 		}
 	}
 	
-	/*
-	Need to add Player 2 Craft Button
-	*/
-	if(keyboard_check_pressed(global.PLAYER_TWO_CRAFT_KEYBOARD)){
+	if(global.PLAYER_TWO_INTERACTION_KEY){
 		scr_CraftAnItem()
 	}
 }

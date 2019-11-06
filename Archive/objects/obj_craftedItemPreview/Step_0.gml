@@ -8,7 +8,7 @@ if(not global.SHOW_GRID_1 and not global.SHOW_GRID_2){
 }
 
 
-if(playerIndex == obj_player1 and keyboard_check_pressed(global.PLAYER_ONE_PLACE_BLOCK)){
+if(playerIndex == obj_player1 and global.PLAYER_ONE_INTERACTION_KEY){
 	amtCraftedItemInStorage = global.STORAGE_CRAFTEDITEMS[? index]
 	if(amtCraftedItemInStorage >= 1){
 		spawnItem = instance_create_depth(x, y, 1, obj_craftedItem)
@@ -17,7 +17,7 @@ if(playerIndex == obj_player1 and keyboard_check_pressed(global.PLAYER_ONE_PLACE
 	}
 }
 
-if(playerIndex == obj_player2 and keyboard_check_pressed(global.PLAYER_TWO_PLACE_BLOCK)){
+if(playerIndex == obj_player2 and global.PLAYER_TWO_INTERACTION_KEY){
 	amtCraftedItemInStorage = global.STORAGE_CRAFTEDITEMS[? index]
 	if(amtCraftedItemInStorage >= 1){
 		spawnItem = instance_create_depth(x, y, 1, obj_craftedItem)

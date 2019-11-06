@@ -7,7 +7,7 @@ if(playerWhoIsCrafting == 0){
 	//Player Input
 	scr_PlaceBlock_Player1_KeyboardInput()
 	
-	if(keyboard_check_pressed(global.PLAYER_ONE_GUI_BUILD_GRID_KEYBOARD)){
+	if(global.PLAYER_ONE_INTERACTION_KEY){
 		show_debug_message("ACTIVATE")
 		global.SHOW_GRID_1 = !global.SHOW_GRID_1
 		if(global.SHOW_GRID_1){
@@ -23,7 +23,7 @@ if(playerWhoIsCrafting == 1){
 	/*
 	Need to add Player 2 Craft Button
 	*/
-	if(keyboard_check_pressed(global.PLAYER_TWO_GUI_BUILD_GRID_KEYBOARD)){
+	if(global.PLAYER_TWO_INTERACTION_KEY){
 		show_debug_message("ACTIVATE")
 		global.SHOW_GRID_2 = !global.SHOW_GRID_2
 		if(global.SHOW_GRID_2){

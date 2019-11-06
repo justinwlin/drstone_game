@@ -4,8 +4,8 @@ Drawing Black Box and showing options to craft
 ===================================================
 */
 
-bottomLeftX = playerAccess.x
-bottomLeftY = playerAccess.y
+bottomLeftX = spawnX
+bottomLeftY = spawnY
 topRightX = (bottomLeftX + spriteDimension * itemPerRow)
 topRightY = (bottomLeftY - spriteDimension * (itemPerRow + 2))
 
@@ -20,7 +20,6 @@ draw_rectangle_color(bottomLeftX, bottomLeftY,
 					topRightX, topRightY,
 					c_black, c_black, c_black, c_black, false)
 					
-
 
 SquareXShift = SquareX * (spriteDimension)
 SquareYShift = SquareY * (spriteDimension + textHeight)

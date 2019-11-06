@@ -11,3 +11,6 @@ itemColNum = 3
 
 itemSelectedIndex = 0
 squareColor = c_red
+
+spawnX = 0
+spawnY = 0

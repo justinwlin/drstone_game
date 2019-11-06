@@ -4,8 +4,8 @@ Drawing Black Box and showing options to craft
 ===================================================
 */
 
-bottomLeftX = playerAccess.x
-bottomLeftY = playerAccess.y
+bottomLeftX = spawnX
+bottomLeftY = spawnY
 topRightX = (bottomLeftX + spriteDimension * itemPerRow)
 topRightY = (bottomLeftY - spriteDimension * (itemPerRow + 2))
 

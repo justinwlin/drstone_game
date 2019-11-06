@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "0ea9e8c0-e78e-4226-8112-d8780e1fb6b6",
+            "Value": {
+                "id": "8bf6a74c-9649-4238-9a2d-d10f10cea70b",
+                "resourcePath": "objects\/obj_buildingTableProto\/obj_buildingTableProto.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0fdf62be-c12d-4c00-ba4e-1d61fdaa90a0",
             "Value": {
                 "id": "f927321e-25f4-439a-8b9b-bd172dee6c1a",
@@ -247,6 +255,14 @@
             }
         },
         {
+            "Key": "5c5f715e-e85a-4614-bba5-e30c05643878",
+            "Value": {
+                "id": "e2f08657-eef0-4f7a-af2a-1191c9c8949b",
+                "resourcePath": "sprites\/spr_craftingTable\/spr_craftingTable.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "693f5cd3-3930-43f3-9528-8ecd4c507325",
             "Value": {
                 "id": "5871fcbf-4ca0-409b-8403-2a3d79e6f457",
@@ -327,6 +343,14 @@
             }
         },
         {
+            "Key": "96a55fcc-a822-4654-a424-4c662daa84bf",
+            "Value": {
+                "id": "ef88f7ee-f222-43a6-b7aa-245fbaee6e9c",
+                "resourcePath": "objects\/obj_craftingTableProto\/obj_craftingTableProto.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9ab7a86a-8a5a-4b90-8994-f7396a2b60bf",
             "Value": {
                 "id": "e9033db6-ea98-421d-8209-19bf4713945f",
@@ -348,6 +372,14 @@
                 "id": "6b24a4a4-1183-499a-995c-a2349c8db7f6",
                 "resourcePath": "scripts\/drawingGUI_PlaceBlocks\/drawingGUI_PlaceBlocks.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a091efad-6399-4f2a-a6cf-8af5e7e5f99a",
+            "Value": {
+                "id": "9786d266-e5af-4d39-bb09-17de8acba993",
+                "resourcePath": "sprites\/spr_buildTable\/spr_buildTable.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

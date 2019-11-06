@@ -17,15 +17,8 @@ global.PLAYER_ONE_DOWN_KEYBOARD = ord("S")
 global.PLAYER_ONE_RIGHT_KEYBOARD = ord("D")
 global.PLAYER_ONE_LEFT_KEYBOARD = ord("A")
 //Break Down Resource
-global.PLAYER_ONE_RESOURCE_BREAK = ord("T")
-//Crafting
-global.PLAYER_ONE_GUI_CRAFTING_TABLE_KEYBOARD = ord("Y")
-global.PLAYER_ONE_CRAFT_KEYBOARD = ord("U")
-//Building Keyboard
-global.PLAYER_ONE_GUI_BUILDING_KEYBOARD = ord("I")
-global.PLAYER_ONE_GUI_BUILD_GRID_KEYBOARD = ord("O")
-global.PLAYER_ONE_PLACE_BLOCK = ord("P")
-
+global.PLAYER_ONE_INTERACTION_KEY = keyboard_check_pressed(ord("T"))
+global.PLAYER_ONE_QUIT_INTERACTION_KEY = keyboard_check_pressed(ord("Y"))
 //===========
 //Player 2
 //===========
@@ -35,14 +28,8 @@ global.PLAYER_TWO_DOWN_KEYBOARD = vk_down
 global.PLAYER_TWO_RIGHT_KEYBOARD = vk_right
 global.PLAYER_TWO_LEFT_KEYBOARD = vk_left
 //Break Down Resource
-global.PLAYER_TWO_RESOURCE_BREAK = ord("F")
-//Crafting
-global.PLAYER_TWO_GUI_CRAFTING_TABLE_KEYBOARD = ord("G")
-global.PLAYER_TWO_CRAFT_KEYBOARD = ord("H")
-//Building
-global.PLAYER_TWO_GUI_BUILDING_KEYBOARD = ord("J")
-global.PLAYER_TWO_GUI_BUILD_GRID_KEYBOARD = ord("K")
-global.PLAYER_TWO_PLACE_BLOCK = ord("L")
+global.PLAYER_TWO_INTERACTION_KEY = keyboard_check_pressed(ord("F"))
+global.PLAYER_TWO_QUIT_INTERACTION_KEY = keyboard_check_pressed(ord("G"))
 
 /*
 ===========
