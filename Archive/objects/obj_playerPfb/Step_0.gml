@@ -38,3 +38,5 @@ if(deviceIndex==0){
 		}
 	}
 }
+
+scr_solid_collide(obj_craftedItem)

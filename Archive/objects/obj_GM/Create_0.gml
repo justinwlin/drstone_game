@@ -7,6 +7,7 @@ if gamepad_is_connected(1) gamepad_set_axis_deadzone(0, 0.05);
 Global Variable
 ===========
 */
+global.DAY = true
 
 //===========
 //Player 1

@@ -15,8 +15,8 @@ for(i = 0; i < 5; i++){
 }
 
 //Placing Crafting Table
-coordinate = global.GRID_COORDINATE [# 7,5]
-global.PLACED_ITEMS [# 7,5] = true
+coordinate = global.GRID_COORDINATE [# 6,5]
+global.PLACED_ITEMS [# 6,5] = true
 coordX = coordinate[0]
 coordY = coordinate[1]
 
