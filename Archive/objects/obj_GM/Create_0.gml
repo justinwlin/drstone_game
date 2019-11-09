@@ -126,7 +126,7 @@ Storage for Crafted Items
 */
 global.STORAGE_CRAFTEDITEMS = ds_map_create();
 //Initialization of storage
-global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 0
+global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 5
 global.STORAGE_CRAFTEDITEMS[? crafted.tent] = 0
 global.STORAGE_CRAFTEDITEMS[? crafted.questionBlock] = 0
 global.STORAGE_CRAFTEDITEMS[? crafted.bluePortal] = 0

@@ -3,16 +3,7 @@
 
 //Array of possible resources
 //This code is spawning in a bunch of obj_resources
-var i;
-for(i = 0; i < 5; i++){
-	obj = instance_create_depth(50 + i * 200, 30, -1, obj_resource)
-	obj.resourceType = irandom(4)
-}
-
-for(i = 0; i < 5; i++){
-	obj = instance_create_depth(50 + i * 200, 100, -1, obj_resource)
-	obj.resourceType = irandom(4)
-}
+alreadySpawnedItems = false
 
 //Placing Crafting Table
 coordinate = global.GRID_COORDINATE [# 6,5]
