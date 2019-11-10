@@ -103,30 +103,3 @@ if(ds_map_exists(global.CRAFTEDITEMS_RECIPE, itemSelectedIndex)){
 	}
 	
 }
-	
-	/*
-	crafting = global.CRAFTEDITEMS_RECIPE[? itemSelectedIndex]
-	lengthCrafting = array_length_1d(crafting)
-	
-	canCraft = false
-	for(var craftingLoop = 0; craftingLoop < lengthCrafting; craftingLoop ++){
-		item = crafting[craftingLoop]
-		itemID = item[0]
-		amtItem = item[1]
-		
-		if(global.storage[? itemID] >= amtItem){
-			canCraft = true
-		}
-	}
-	
-	if (canCraft){
-		squareColor = c_green
-	}
-	else{
-		squareColor = c_red
-	}
-	
-}else{
-	squareColor = c_red
-}
-*/
