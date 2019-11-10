@@ -9,6 +9,6 @@ if(daynightBool){
 }
 
 if(not alarmCalled){
-	alarm[0] = room_speed * 120
+	alarm[0] = room_speed * secondsInADay
 	alarmCalled = true
 }

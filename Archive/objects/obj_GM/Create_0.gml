@@ -95,9 +95,10 @@ enum resources {
 //EXACTLY THE SAME ORDER AS THE SPRITE ORDER IN ITEM_STORAGE
 enum crafted {
 	fence, 
-	tent, 
-	questionBlock, 
-	bluePortal
+	brickWall, 
+	steelWall,
+	woodSpike,
+	ironSpike
 }
 
 /*
@@ -105,7 +106,7 @@ enum crafted {
 Picked Up Items
 ===========
 */
-global.nameOfItems = ["stone", "wood", "steel", "meat"]//MAke this the same order as item enum
+global.nameOfItems = ["stone", "wood", "steel", "steel 2 meh"]//MAke this the same order as item enum
 global.PICKED_UP_ITEMS = ds_queue_create();
 /*
 ======================
@@ -127,9 +128,10 @@ Storage for Crafted Items
 global.STORAGE_CRAFTEDITEMS = ds_map_create();
 //Initialization of storage
 global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 5
-global.STORAGE_CRAFTEDITEMS[? crafted.tent] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.questionBlock] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.bluePortal] = 0
+global.STORAGE_CRAFTEDITEMS[? crafted.brickWall] = 0
+global.STORAGE_CRAFTEDITEMS[? crafted.steelWall] = 0
+global.STORAGE_CRAFTEDITEMS[? crafted.woodSpike] = 0
+global.STORAGE_CRAFTEDITEMS[? crafted.ironSpike] = 0
 
 
 /*
@@ -140,9 +142,10 @@ Crafting Recipe
 global.CRAFTEDITEMS_RECIPE = ds_map_create();
 //Initialization of storage
 global.CRAFTEDITEMS_RECIPE[? crafted.fence] = [[items.wood, 2], [items.stone, 3]]
-global.CRAFTEDITEMS_RECIPE[? crafted.tent] = [[items.wood, 2], [items.stone, 4]]
-global.CRAFTEDITEMS_RECIPE[? crafted.questionBlock] = [[items.wood, 2], [items.stone, 5]]
-global.CRAFTEDITEMS_RECIPE[? crafted.bluePortal] = [[items.wood, 2], [items.stone, 6], [items.steel, 3]]
+global.CRAFTEDITEMS_RECIPE[? crafted.brickWall] = [[items.wood, 2], [items.stone, 4]]
+global.CRAFTEDITEMS_RECIPE[? crafted.steelWall] = [[items.wood, 2], [items.stone, 5]]
+global.CRAFTEDITEMS_RECIPE[? crafted.woodSpike] = [[items.wood, 2], [items.steel, 3]]
+global.CRAFTEDITEMS_RECIPE[? crafted.ironSpike] = [[items.wood, 2], [items.steel, 3]]
 
 /*
 ===========

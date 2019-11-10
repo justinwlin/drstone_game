@@ -9,10 +9,5 @@ craftedStorageNum = sprite_get_number(spr_crafted);
 //Sprite dimension
 spriteDimension = sprite_get_height(spr_itemStorage)
 
-//Passes right argument to script depending on the itemMode
-if(itemMode){
-	drawStorageManager(itemStorageNum, spriteDimension, global.storage, spr_itemStorage)
-}
-else{
-	drawStorageManager(craftedStorageNum, spriteDimension, global.STORAGE_CRAFTEDITEMS, spr_crafted)
-}
+drawStorageManager(itemStorageNum, spriteDimension, global.storage, spr_itemStorage)
+drawStorageManager_crafted(craftedStorageNum, spriteDimension, global.STORAGE_CRAFTEDITEMS, spr_crafted, itemStorageNum)

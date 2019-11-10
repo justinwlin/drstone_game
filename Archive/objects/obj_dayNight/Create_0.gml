@@ -4,3 +4,4 @@ stringToDisplay = "Day"
 daynightBool = true
 
 alarmCalled = false
+secondsInADay = 120
