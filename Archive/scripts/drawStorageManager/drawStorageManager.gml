@@ -9,5 +9,6 @@ for(i = 0; i < numItems; i++){
 	yDraw = room_height - spriteDimension
 	draw_sprite_stretched(spriteToDraw, i, xDraw, yDraw, spriteDimension, spriteDimension)
 	amount = string(dictToAccess[? i])
+	draw_set_color(c_white)
 	draw_text(xDraw, yDraw, amount)
 }

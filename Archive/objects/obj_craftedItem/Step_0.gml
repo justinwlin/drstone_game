@@ -5,3 +5,6 @@ image_index = itemType
 if(itemType >= 3){
 	walkable = true
 }
+if (currHealth<0){
+instance_destroy();
+}

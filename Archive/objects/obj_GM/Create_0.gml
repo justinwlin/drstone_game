@@ -17,6 +17,7 @@ global.PLAYER_ONE_UP_KEYBOARD = ord("W")
 global.PLAYER_ONE_DOWN_KEYBOARD = ord("S")
 global.PLAYER_ONE_RIGHT_KEYBOARD = ord("D")
 global.PLAYER_ONE_LEFT_KEYBOARD = ord("A")
+
 //Break Down Resource
 global.PLAYER_ONE_INTERACTION_KEY = keyboard_check_pressed(ord("T"))
 global.PLAYER_ONE_QUIT_INTERACTION_KEY = keyboard_check_pressed(ord("Y"))
@@ -130,7 +131,7 @@ global.STORAGE_CRAFTEDITEMS = ds_map_create();
 global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 5
 global.STORAGE_CRAFTEDITEMS[? crafted.brickWall] = 0
 global.STORAGE_CRAFTEDITEMS[? crafted.steelWall] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.woodSpike] = 0
+global.STORAGE_CRAFTEDITEMS[? crafted.woodSpike] = 1
 global.STORAGE_CRAFTEDITEMS[? crafted.ironSpike] = 0
 
 

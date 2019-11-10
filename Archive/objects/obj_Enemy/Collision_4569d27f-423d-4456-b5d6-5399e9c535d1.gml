@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited()
-deviceIndex=1;
-idleSprite = spr_p2;
-walkSprite=spr_p2_walk;
+isPaused=true;
+if (other.x>x){
+x-=10;
+other.x+=10;
+}else{
+other.x-=10;
+x+=10;
+}
