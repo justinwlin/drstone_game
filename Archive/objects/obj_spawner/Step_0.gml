@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(global.DAY and not alreadySpawnedItems){
 	show_debug_message("Spawning items")
-	var i = 10
+	var i = irandom_range(5, 15)
 	while(i > 0){
 		
 		result = global.GRID_COORDINATE[# irandom(15),irandom(10)]

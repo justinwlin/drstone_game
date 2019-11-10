@@ -17,6 +17,7 @@ image_blend=c_red;
 image_blend=c_white;
 }
 
+show_debug_message(currHealth)
 if(deviceIndex==0){
 	if(not isCrafting and not isBuilding){
 	//Movement
@@ -126,4 +127,8 @@ x+=4;
 x-=4;}
 
 
+}
+
+if(currHealth <= 0){
+	room_goto_next()
 }

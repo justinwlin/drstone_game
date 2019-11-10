@@ -1,8 +1,8 @@
 solidCollideWith = argument0
-topPlayerLine = collision_line(x-27,y-27, x+27, y-27, solidCollideWith, false, false)
-bottomPlayerLine = collision_line(x-27,y+27, x+27, y+27, solidCollideWith, false, false)
-leftPlayerLine = collision_line(x-27,y-27, x-27, y+27, solidCollideWith, false, false)
-rightPlayerLine = collision_line(x+27,y-27, x+27, y+27, solidCollideWith, false, false)
+topPlayerLine = collision_line(x-32,y-32, x+32, y-32, solidCollideWith, false, false)
+bottomPlayerLine = collision_line(x-32,y+32, x+32, y+32, solidCollideWith, false, false)
+leftPlayerLine = collision_line(x-32,y-32, x-32, y+32, solidCollideWith, false, false)
+rightPlayerLine = collision_line(x+32,y-32, x+32, y+32, solidCollideWith, false, false)
 
 obj = instance_position(x, y, obj_craftedItem)
 if(obj != noone){
