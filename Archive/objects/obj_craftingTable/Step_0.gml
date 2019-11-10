@@ -78,18 +78,55 @@ Setting the square color if you have enough
 if(ds_map_exists(global.CRAFTEDITEMS_RECIPE, itemSelectedIndex)){
 	crafting = global.CRAFTEDITEMS_RECIPE[? itemSelectedIndex]
 	lengthCrafting = array_length_1d(crafting)
+	show_debug_message("CRAFTING TABLE CHECKING IF HAVE ENOUGH")
+	show_debug_message(lengthCrafting)
 	
+	checkValid = true
+	for(var craftingLoop = 0; craftingLoop < lengthCrafting; craftingLoop++){
+		item = crafting[craftingLoop]
+		itemID = item[0]
+		amtItem = item[1]
+		show_debug_message(itemID)
+		show_debug_message(amtItem)
+		if(amtItem > global.storage[? itemID]){
+			checkValid = false
+		}
+		if(craftingLoop == lengthCrafting - 1){
+			if(checkValid){
+				squareColor = c_green
+			}
+			else{
+				squareColor = c_red
+			}
+		}
+		
+	}
+	
+}
+	
+	/*
+	crafting = global.CRAFTEDITEMS_RECIPE[? itemSelectedIndex]
+	lengthCrafting = array_length_1d(crafting)
+	
+	canCraft = false
 	for(var craftingLoop = 0; craftingLoop < lengthCrafting; craftingLoop ++){
 		item = crafting[craftingLoop]
 		itemID = item[0]
 		amtItem = item[1]
-		if (global.storage[? itemID] >= amtItem){
-			squareColor = c_green
-		}
-		else{
-			squareColor = c_red
+		
+		if(global.storage[? itemID] >= amtItem){
+			canCraft = true
 		}
 	}
+	
+	if (canCraft){
+		squareColor = c_green
+	}
+	else{
+		squareColor = c_red
+	}
+	
 }else{
 	squareColor = c_red
 }
+*/

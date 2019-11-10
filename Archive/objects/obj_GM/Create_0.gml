@@ -77,8 +77,7 @@ Enums
 enum items {
 	stone, 
 	wood, 
-	steel, 
-	meat
+	steel
 }
 
 //FOR RESOURCE ENUM MAKE SURE THAT YOU WRITE IT
@@ -107,7 +106,7 @@ enum crafted {
 Picked Up Items
 ===========
 */
-global.nameOfItems = ["stone", "wood", "steel", "steel 2 meh"]//MAke this the same order as item enum
+global.nameOfItems = ["stone", "wood", "steel"]//MAke this the same order as item enum
 global.PICKED_UP_ITEMS = ds_queue_create();
 /*
 ======================
@@ -119,7 +118,6 @@ global.storage = ds_map_create();
 global.storage[? items.stone] = 2
 global.storage[? items.wood] = 5
 global.storage[? items.steel] = 1
-global.storage[? items.meat] = 1
 
 /*
 ============================================
@@ -128,10 +126,10 @@ Storage for Crafted Items
 */
 global.STORAGE_CRAFTEDITEMS = ds_map_create();
 //Initialization of storage
-global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 5
+global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 0
 global.STORAGE_CRAFTEDITEMS[? crafted.brickWall] = 0
 global.STORAGE_CRAFTEDITEMS[? crafted.steelWall] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.woodSpike] = 1
+global.STORAGE_CRAFTEDITEMS[? crafted.woodSpike] = 0
 global.STORAGE_CRAFTEDITEMS[? crafted.ironSpike] = 0
 
 
@@ -142,11 +140,11 @@ Crafting Recipe
 */
 global.CRAFTEDITEMS_RECIPE = ds_map_create();
 //Initialization of storage
-global.CRAFTEDITEMS_RECIPE[? crafted.fence] = [[items.wood, 2], [items.stone, 3]]
+global.CRAFTEDITEMS_RECIPE[? crafted.fence] = [[items.wood, 2]]
 global.CRAFTEDITEMS_RECIPE[? crafted.brickWall] = [[items.wood, 2], [items.stone, 4]]
-global.CRAFTEDITEMS_RECIPE[? crafted.steelWall] = [[items.wood, 2], [items.stone, 5]]
-global.CRAFTEDITEMS_RECIPE[? crafted.woodSpike] = [[items.wood, 2], [items.steel, 3]]
-global.CRAFTEDITEMS_RECIPE[? crafted.ironSpike] = [[items.wood, 2], [items.steel, 3]]
+global.CRAFTEDITEMS_RECIPE[? crafted.steelWall] = [[items.steel, 3], [items.stone, 5]]
+global.CRAFTEDITEMS_RECIPE[? crafted.woodSpike] = [[items.wood, 5], [items.stone, 3]]
+global.CRAFTEDITEMS_RECIPE[? crafted.ironSpike] = [[items.steel, 5], [items.wood, 2]]
 
 /*
 ===========
@@ -156,11 +154,11 @@ DROPS
 global.DROPS = ds_map_create();
 //[(itemObject, numOfThatObject), ...]
 global.DROPS[? resources.tree] = [[items.wood, 2]]
-global.DROPS[? resources.boulder] = [[items.stone, 3]]
-global.DROPS[? resources.chest] = [[items.meat, 3], [items.steel, 2]]
-global.DROPS[? resources.blueThingy] = [[items.steel, 2]]
-global.DROPS[? resources.cloud] = [[items.steel, 2]]
-global.DROPS[? resources.questionMark] = [[items.steel, 2]]
+global.DROPS[? resources.boulder] = [[items.stone, 2]]
+global.DROPS[? resources.chest] = [[items.stone, 2], [items.steel, 2]]
+global.DROPS[? resources.blueThingy] = [[items.wood, 1]]
+global.DROPS[? resources.cloud] = [[items.wood, 1]]
+global.DROPS[? resources.questionMark] = [[items.wood, 1]]
 
 /*
 =================================

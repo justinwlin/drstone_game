@@ -17,7 +17,6 @@ image_blend=c_red;
 image_blend=c_white;
 }
 
-show_debug_message(currHealth)
 if(deviceIndex==0){
 	if(not isCrafting and not isBuilding){
 	//Movement
