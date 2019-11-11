@@ -6,4 +6,3 @@ daynightBool = true
 alarmCalled = false
 secondsInADay = 20
 dayCount=1;
-

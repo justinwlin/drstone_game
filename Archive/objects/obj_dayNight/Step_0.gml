@@ -3,10 +3,10 @@
 
 
 if(daynightBool){
-	stringToDisplay = "Day"
+	stringToDisplay = "Day: " + string(dayCount)
 	global.DAY = true
 }else{
-	stringToDisplay = "Night"
+	stringToDisplay = "Night: " + string(dayCount)
 	global.DAY = false
 }
 

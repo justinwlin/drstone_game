@@ -54,9 +54,13 @@ if(deviceIndex==0){
 			y -= 5
 		}
 		if (global.PLAYER_ONE_INTERACTION_KEY){
+			if(cooldown){
 			ins = instance_create_depth(x,y,depth-1,obj_blade)
 			ins.image_xscale=image_xscale;
 							ins.x+=image_xscale*40;
+			cooldown = false
+			alarm[0] = room_speed * .4
+			}
 
 		}
 	}
@@ -102,9 +106,14 @@ if(deviceIndex==0){
 		}
 	
 	if (global.PLAYER_TWO_INTERACTION_KEY){
-				ins = instance_create_depth(x,y,depth-1,obj_blade)
-				ins.image_xscale=image_xscale;
-				ins.x+=image_xscale*40;
+			if(cooldown){
+			ins = instance_create_depth(x,y,depth-1,obj_blade)
+			ins.image_xscale=image_xscale;
+							ins.x+=image_xscale*40;
+			cooldown = false
+			alarm[0] = room_speed * .4
+			}
+
 
 		}
 
