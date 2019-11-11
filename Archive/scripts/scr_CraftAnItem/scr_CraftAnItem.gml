@@ -9,4 +9,7 @@ if(squareColor == c_green){
 				
 	}
 	global.STORAGE_CRAFTEDITEMS[? itemSelectedIndex]+= 1
+	
+	//add a prompt
+	global.SHOW_CRAFTED_ITEM=global.CRAFTEDNAMES[itemID];
 }

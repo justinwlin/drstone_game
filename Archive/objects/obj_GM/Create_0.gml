@@ -2,6 +2,9 @@ if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.05);
 
 if gamepad_is_connected(1) gamepad_set_axis_deadzone(0, 0.05);
 
+d1=0;
+d2=1;
+
 /*
 ===========
 Global Variable
@@ -18,9 +21,21 @@ global.PLAYER_ONE_DOWN_KEYBOARD = ord("S")
 global.PLAYER_ONE_RIGHT_KEYBOARD = ord("D")
 global.PLAYER_ONE_LEFT_KEYBOARD = ord("A")
 
+
+global.PLAYER_ONE_UP_PAD=false;
+global.PLAYER_ONE_DOWN_PAD=false;
+global.PLAYER_ONE_RIGHT_PAD=false;
+global.PLAYER_ONE_LEFT_PAD=false;
+
+global.PLAYER_TWO_UP_PAD=false;
+global.PLAYER_TWO_DOWN_PAD=false;
+global.PLAYER_TWO_RIGHT_PAD=false;
+global.PLAYER_TWO_LEFT_PAD=false;
+
 //Break Down Resource
-global.PLAYER_ONE_INTERACTION_KEY = keyboard_check_pressed(ord("T"))
-global.PLAYER_ONE_QUIT_INTERACTION_KEY = keyboard_check_pressed(ord("Y"))
+global.PLAYER_ONE_INTERACTION_KEY = keyboard_check_pressed(ord("T")) || gamepad_button_check_pressed(d1,gp_face1)
+global.PLAYER_ONE_QUIT_INTERACTION_KEY = keyboard_check_pressed(ord("Y")) || gamepad_button_check_pressed(d1,gp_face2)
+
 //===========
 //Player 2
 //===========
@@ -30,8 +45,8 @@ global.PLAYER_TWO_DOWN_KEYBOARD = vk_down
 global.PLAYER_TWO_RIGHT_KEYBOARD = vk_right
 global.PLAYER_TWO_LEFT_KEYBOARD = vk_left
 //Break Down Resource
-global.PLAYER_TWO_INTERACTION_KEY = keyboard_check_pressed(ord("F"))
-global.PLAYER_TWO_QUIT_INTERACTION_KEY = keyboard_check_pressed(ord("G"))
+global.PLAYER_TWO_INTERACTION_KEY = keyboard_check_pressed(ord("F"))||gamepad_button_check_pressed(d2,gp_face1)
+global.PLAYER_TWO_QUIT_INTERACTION_KEY = keyboard_check_pressed(ord("G"))|| gamepad_button_check_pressed(d2,gp_face2)
 
 /*
 ===========
@@ -136,6 +151,8 @@ global.STORAGE_CRAFTEDITEMS[? crafted.ironSpike] = 0
 Crafting Recipe
 ============================================
 */
+global.CRAFTEDNAMES=["Fence","Brick Wall","Steel Wall","Wood Spike","Iron Spike"]
+
 global.CRAFTEDITEMS_RECIPE = ds_map_create();
 //Initialization of storage
 global.CRAFTEDITEMS_RECIPE[? crafted.fence] = [[items.wood, 2]]

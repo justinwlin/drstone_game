@@ -17,3 +17,4 @@ isInvincible=false;
 invinciblelElapsed=0;
 
 cooldown = true
+isControlling=false;

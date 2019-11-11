@@ -17,20 +17,58 @@ image_blend=c_red;
 image_blend=c_white;
 }
 
+
+isControlling=false;
+var haxis = gamepad_axis_value(deviceIndex, gp_axislh);
+var vaxis = gamepad_axis_value(deviceIndex, gp_axislv);
+//show_message(string(haxis)+string(vaxis))
+if(not isCrafting and not isBuilding){
+if (haxis>=0.5||haxis<=-0.5 || vaxis>=0.5||vaxis<=-0.5){
+	isControlling=true;
+	if (haxis<=-0.5){
+	x-=4;image_xscale=-1;
+	}else if (haxis>=0.5){
+		x+=4;image_xscale=1;
+	}
+
+	if (vaxis<=-0.5){
+	y-=4;//image_xscale=-1;
+	}else if (vaxis>=0.5){
+		y+=4;//image_xscale=1;
+	}
+
+
+
+	if (isIdle){
+		isIdle=false;
+		sprite_index=walkSprite;
+		}
+	
+	}else{
+		isIdle=true;
+		sprite_index = idleSprite;
+	}
+	
+
+}
+
+
 if(deviceIndex==0){
 	if(not isCrafting and not isBuilding){
 	//Movement
 	if ((keyboard_check(global.PLAYER_ONE_LEFT_KEYBOARD))||
 	keyboard_check(global.PLAYER_ONE_RIGHT_KEYBOARD) ||
 	keyboard_check(global.PLAYER_ONE_UP_KEYBOARD)||
-	keyboard_check(global.PLAYER_ONE_DOWN_KEYBOARD)){
+	keyboard_check(global.PLAYER_ONE_DOWN_KEYBOARD)
+	&& !isControlling
+	){
 		
 		if (isIdle){
 		isIdle=false;
 		sprite_index=walkSprite;
 		}
 	
-	}else{
+	}else if (!isControlling){
 		isIdle=true;
 		sprite_index = idleSprite;
 	}
@@ -53,7 +91,7 @@ if(deviceIndex==0){
 		if(keyboard_check(global.PLAYER_ONE_UP_KEYBOARD)){
 			y -= 5
 		}
-		if (global.PLAYER_ONE_INTERACTION_KEY){
+		if (global.PLAYER_ONE_INTERACTION_KEY ){
 			if(cooldown){
 			ins = instance_create_depth(x,y,depth-1,obj_blade)
 			ins.image_xscale=image_xscale;
@@ -71,14 +109,14 @@ if(deviceIndex==0){
 		if ((keyboard_check(global.PLAYER_TWO_LEFT_KEYBOARD))||
 	keyboard_check(global.PLAYER_TWO_RIGHT_KEYBOARD) ||
 	keyboard_check(global.PLAYER_TWO_UP_KEYBOARD)||
-	keyboard_check(global.PLAYER_TWO_DOWN_KEYBOARD)){
+	keyboard_check(global.PLAYER_TWO_DOWN_KEYBOARD)	&& !isControlling){
 		
 		if (isIdle){
 		isIdle=false;
 		sprite_index=walkSprite;
 		}
 	
-	}else{
+	}else if (!isControlling){
 		isIdle=true;
 		sprite_index = idleSprite;
 	}
@@ -121,6 +159,9 @@ if(deviceIndex==0){
 	}
 }
 
+
+
+
 scr_solid_collide(obj_craftedItem)
 
 if (isInvincible){
@@ -136,6 +177,12 @@ x-=4;}
 
 
 }
+
+
+
+
+
+
 
 if(currHealth <= 0){
 	room_goto_next()
