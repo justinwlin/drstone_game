@@ -14,7 +14,7 @@ if(global.DAY and not alreadySpawnedItems){
 		
 		if(not resourceThere and not craftedThere){
 			obj = instance_create_depth(xPos, yPos, -1, obj_resource)
-			obj.resourceType = irandom(ds_map_size(global.STORAGE_CRAFTEDITEMS) - 1)
+			obj.resourceType = irandom(ds_map_size(global.DROPS) - 1)
 			i -= 1
 		}		
 	}

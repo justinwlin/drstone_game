@@ -24,6 +24,10 @@ if(playerIndex == obj_player1 and global.PLAYER_ONE_INTERACTION_KEY){
 	if(amtCraftedItemInStorage >= 1 and (not itemExistsPlace)){
 		spawnItem = instance_create_depth(x, y, 1, obj_craftedItem)
 		spawnItem.itemType = index
+		if (index<3){
+		spawnItem.currHealth = (index+1)*2;
+		}
+		spawnItem.maxHealth=spawnItem.currHealth;
 		global.STORAGE_CRAFTEDITEMS[? index] -= 1
 	}
 }

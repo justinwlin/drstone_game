@@ -84,11 +84,9 @@ enum items {
 //EXACTLY THE SAME ORDER AS THE SPRITE ORDER IN ITEM_STORAGE
 enum resources {
 	tree, 
-	boulder,
-	chest,
-	blueThingy,
-	cloud, 
-	questionMark
+	rock,
+	mine
+
 }
 
 //FOR CRAFTED ENUM MAKE SURE THAT YOU WRITE IT
@@ -154,11 +152,8 @@ DROPS
 global.DROPS = ds_map_create();
 //[(itemObject, numOfThatObject), ...]
 global.DROPS[? resources.tree] = [[items.wood, 2]]
-global.DROPS[? resources.boulder] = [[items.stone, 2]]
-global.DROPS[? resources.chest] = [[items.stone, 2], [items.steel, 2]]
-global.DROPS[? resources.blueThingy] = [[items.wood, 1]]
-global.DROPS[? resources.cloud] = [[items.wood, 1]]
-global.DROPS[? resources.questionMark] = [[items.wood, 1]]
+global.DROPS[? resources.rock] = [[items.stone, 2]]
+global.DROPS[? resources.mine] = [[items.stone, 2], [items.steel, 2]]
 
 /*
 =================================
@@ -167,8 +162,5 @@ Required Time for Resources
 */
 global.RQTime = ds_map_create();
 global.RQTime[? resources.tree] = 2
-global.RQTime[? resources.boulder] = 2
-global.RQTime[? resources.chest] = 2
-global.RQTime[? resources.blueThingy] = 2
-global.RQTime[? resources.cloud] = 2
-global.RQTime[? resources.questionMark] = 2
+global.RQTime[? resources.rock] = 2
+global.RQTime[? resources.mine] = 2

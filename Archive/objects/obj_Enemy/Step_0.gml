@@ -3,7 +3,7 @@
 //
 if (isPaused){
 pauseElapsed++;
-	if (pauseElapsed>20){
+	if (pauseElapsed>15){
 	isPaused=false;
 	pauseElapsed=0;
 	}
@@ -46,6 +46,7 @@ x-=4;}
 	image_xscale=-1;
 	
 	}
+	
 	move_towards_point( obj_player2.x, obj_player2.y, spd );
 
 	}else if (dis1>30){
