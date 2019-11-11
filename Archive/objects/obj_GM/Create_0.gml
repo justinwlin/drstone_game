@@ -4,7 +4,7 @@ if gamepad_is_connected(1) gamepad_set_axis_deadzone(0, 0.05);
 
 d1=0;
 d2=1;
-
+audio_play_sound(sound0, 1, true);
 /*
 ===========
 Global Variable
