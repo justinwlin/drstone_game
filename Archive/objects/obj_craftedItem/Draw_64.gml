@@ -4,5 +4,6 @@ if (currHealth<maxHealth){
 draw_set_color(c_black)
 draw_rectangle(x,y-40,x+20,y+5-40,false);
 draw_set_color(c_red)
+if (currHealth<0){currHealth=0;}
 draw_rectangle(x,y-40,x+currHealth/maxHealth*20,y+5-40,false);
 }
