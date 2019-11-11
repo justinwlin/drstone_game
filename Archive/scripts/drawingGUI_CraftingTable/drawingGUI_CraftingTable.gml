@@ -55,6 +55,7 @@ for(i = 0; i < numItems; i++){
 		amtItem = item[1]
 		//Drawing it
 		textItem = textItem + "x" + string(amtItem)
+		draw_set_colour(c_white);
 		draw_text_transformed(xDraw, yDraw + spriteDimension + craftingLoop * textSpacing, 
 								textItem, 0.75, 0.75, 0)
 	}

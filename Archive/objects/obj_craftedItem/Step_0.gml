@@ -8,3 +8,9 @@ if(itemType >= 3){
 if (currHealth<=0){
 instance_destroy();
 }
+if(itemType <= 3){
+	if(setHealth){
+	currHealth = 15
+	}
+	setHealth = false
+}

@@ -128,9 +128,9 @@ Storage for items
 */
 global.storage = ds_map_create();
 //Initialization of storage
-global.storage[? items.stone] = 2
-global.storage[? items.wood] = 5
-global.storage[? items.steel] = 1
+global.storage[? items.stone] = 0
+global.storage[? items.wood] = 0
+global.storage[? items.steel] = 0
 
 /*
 ============================================
@@ -139,11 +139,11 @@ Storage for Crafted Items
 */
 global.STORAGE_CRAFTEDITEMS = ds_map_create();
 //Initialization of storage
-global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.brickWall] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.steelWall] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.woodSpike] = 0
-global.STORAGE_CRAFTEDITEMS[? crafted.ironSpike] = 0
+global.STORAGE_CRAFTEDITEMS[? crafted.fence] = 5
+global.STORAGE_CRAFTEDITEMS[? crafted.brickWall] = 5
+global.STORAGE_CRAFTEDITEMS[? crafted.steelWall] = 5
+global.STORAGE_CRAFTEDITEMS[? crafted.woodSpike] = 5
+global.STORAGE_CRAFTEDITEMS[? crafted.ironSpike] = 5
 
 
 /*
